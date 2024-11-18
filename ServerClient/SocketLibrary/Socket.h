@@ -21,16 +21,16 @@ public:
 class ServerSocket : public Socket{
 public:
 
-	void bindConnection(int port);
-	void listenConnection(int backlog = 5);
+	void bindConnection(int port); // bind to port
+	void listenConnection(int backlog = 5); //Listen for connections
 	void acceptConnection(); //accepts new client connection
 };
 
 class ClientSocket : public Socket{
 public:
-	void connectToServer(std::string& host,int port); //connects to server-ip and port
-	void sendMessage(std::string& message); //sends message
-	void receiveMessage();
+	void connectToServer(const std::string& host,int port); //connects to server-ip and port
+	void sendMessage(const std::string& message); //sends message
+	std::string receiveMessage();
 
 };
 

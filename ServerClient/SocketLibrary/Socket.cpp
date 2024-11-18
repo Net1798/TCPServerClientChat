@@ -41,14 +41,19 @@ void ServerSocket::acceptConnection()
 
 //class clientSocket
 
-void ClientSocket::connectToServer(std::string& host, int port)
+void ClientSocket::connectToServer(const std::string& host, int port)
 {
 
 }
 
 
-void ClientSocket::sendMessage(std::string& message)
+void ClientSocket::sendMessage(const std::string& message)
 {
 
+}
+
+std::string ClientSocket::receiveMessage()
+{
+	return std::string();
 }
 
