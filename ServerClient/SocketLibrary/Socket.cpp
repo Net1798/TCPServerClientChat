@@ -1,5 +1,5 @@
 #include "Socket.h"
-
+#include <iostream>
 
 //class Socket
 
@@ -11,6 +11,7 @@ Socket::Socket()
 
 Socket::~Socket()
 {
+	closeSocket();
 
 }
 
@@ -19,41 +20,4 @@ void Socket::closeSocket()
 
 }
 
-
-//class serverSocket
-void ServerSocket::bindConnection(int port)
-{
-
-}
-
-
-void ServerSocket::listenConnection(int backlog)
-{
-
-}
-
-
-
-void ServerSocket::acceptConnection()
-{
-
-}
-
-//class clientSocket
-
-void ClientSocket::connectToServer(const std::string& host, int port)
-{
-
-}
-
-
-void ClientSocket::sendMessage(const std::string& message)
-{
-
-}
-
-std::string ClientSocket::receiveMessage()
-{
-	return std::string();
-}
 
